@@ -1,0 +1,146 @@
+﻿@page
+@model GateAccountingSoft.Areas.Shipment.Pages.Outgoing.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.SearchString" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.BillNumberSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].BillNumber)
+            </a>
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.CountryIdSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].Country)
+            </a>
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.DeliveryNumberSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].DeliveryNumber)
+            </a>
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.EstimatedArrivalSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].EstimatedArrivalDate)
+            </a>
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.EstimatedReadyDateSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].EstimatedReadyDate)
+            </a>
+        </th>
+        <th>
+            <a asp-page="./Index" asp-route-sortOrder="@Model.ShipmentReportCreationDateSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Items[0].ShipmentReportCreationDate)
+            </a>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Items[0].LandCadastre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Items[0].OrderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Items[0].ShippingCompanyId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Items[0].TransportCompanyId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Items[0].Notes)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItems => item.BillNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.Country)@*muudetud*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.DeliveryNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.EstimatedArrivalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.EstimatedReadyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.ShipmentReportCreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.LandCadastre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.ShippingCompanyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.TransportCompanyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItems => item.Notes)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

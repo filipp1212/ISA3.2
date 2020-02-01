@@ -1,0 +1,236 @@
+﻿@page
+@model ISA3.GateAccountingSoft.Areas.Shipment.Pages.Analysis.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "../../../Pages/Shared/_Layout";
+}
+
+<h1>Analysis</h1>
+
+<form asp-page="./Index" method="get">
+    <div class="mt-4">
+        <div class="form-actions no-color">
+            <p>
+                <div class="row">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;General search
+                    <div class="col-3">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="SearchString" value="@Model.SearchString" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <input type="submit" value="Search" class="btn btn-primary" /> |
+                            <a asp-page="./Index">Clear results</a>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col">
+                    <strong><label for="countrySelect">Country</label></strong>
+                    <select class="form-control" id="countrySelect" name="CountrySearch">
+                        <option value=""></option>
+                        @foreach (var country in Model.CountryList)
+                        {
+                            <option value="@country.Id">@country.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="col">
+                    <strong><label for="typeSelect">Shipment Type</label></strong>
+                    <select class="form-control" id="typeSelect" name="TypeSearch">
+                        <option value=""></option>
+                        <option value="1">Incoming</option>
+                        <option value="2">Outgoing</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <strong><label for="billNumberInput">Bill number</label></strong>
+                        <input class="form-control" value="@Model.BillNrSearch" id="billNumberInput" name="BillNrSearch" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <strong><label for="deliveryNumberInput">Delivery number</label></strong>
+                        <input class="form-control" value="@Model.DeliveryNrSearch" id="deliveryNumberInput" name="DeliveryNrSearch" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <strong><label for="landCadastreNumberInput">LandCadastre</label></strong>
+                        <input class="form-control" value="@Model.LandCadastreSearch" id="landCadastreNumberInput" name="LandCadastreSearch" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <strong><label for="orderIdInput">OrderId</label></strong>
+                        <input class="form-control" id="orderIdInput" name="OrderIdSearch" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><label for="shippingCompanySelect">ShippingCompany</label></strong>
+                    <select class="form-control" id="shippingCompanySelect" name="shippingCompanyIdSearch">
+                        <option value=""></option>
+                        @foreach (var company in Model.CompanyList)
+                        {
+                            <option value="@company.PartyId">@company.OrganizationName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col">
+                    <strong><label for="transportCompanySelect">TransportCompany</label></strong>
+                    <select class="form-control" id="transportCompanySelect" name="transportCompanyIdSearch">
+                        <option value=""></option>
+                        @foreach (var company in Model.CompanyList)
+                        {
+                            <option value="@company.PartyId">@company.OrganizationName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row"></div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</form>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.BillNumberSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].BillNumber)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.CountryIdSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].Country)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DeliveryNumberSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].DeliveryNumber)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.EstimatedArrivalSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].EstimatedArrivalDate)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.EstimatedReadyDateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].EstimatedReadyDate)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ShipmentReportCreationDateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Items[0].ShipmentReportCreationDate)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].LandCadastre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].ShippingCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].TransportCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].Notes)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.BillNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.Country)@*muudetud*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.DeliveryNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.EstimatedArrivalDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.EstimatedReadyDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.ShipmentReportCreationDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.LandCadastre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.OrderId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.ShippingCompany)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.TransportCompany)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItems => item.Notes)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

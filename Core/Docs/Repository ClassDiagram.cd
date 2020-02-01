@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ISA3.Core.ICrudRepository&lt;TObject&gt;">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAIAAAIAIAEAAUBAAAAAAIAAAABCAAAAA=</HashCode>
+      <FileName>ICrudRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISA3.Core.IPaginatedRepository&lt;TObject, TRecord&gt;">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAEAAAAAAAAAAIAAAAECAAAAA=</HashCode>
+      <FileName>IPaginatedRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

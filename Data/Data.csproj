@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>ISA3.Data</AssemblyName>
+    <RootNamespace>ISA3.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Cargo\**" />
+    <Compile Remove="Docs\NewFolder\**" />
+    <Compile Remove="MoneyData\**" />
+    <EmbeddedResource Remove="Cargo\**" />
+    <EmbeddedResource Remove="Docs\NewFolder\**" />
+    <EmbeddedResource Remove="MoneyData\**" />
+    <None Remove="Cargo\**" />
+    <None Remove="Docs\NewFolder\**" />
+    <None Remove="MoneyData\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aids\Aids.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+</Project>

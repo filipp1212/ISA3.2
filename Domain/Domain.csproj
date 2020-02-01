@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>ISA3.Domain</AssemblyName>
+    <RootNamespace>ISA3.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Money\**" />
+    <Compile Remove="PartyDomain\**" />
+    <EmbeddedResource Remove="Money\**" />
+    <EmbeddedResource Remove="PartyDomain\**" />
+    <None Remove="Money\**" />
+    <None Remove="PartyDomain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Shipment.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+</Project>

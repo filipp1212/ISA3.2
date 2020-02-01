@@ -1,0 +1,10 @@
+1. Use Id not ID
+2. Classes are either abstract or sealed
+3. For abstract classes use name Base....
+4. for all keys use string and not int
+5. For all setters use setValue(ref privateField, value)
+6. For key getters use getKey(ref privateField) - in case of null or white space the new GUID will be generated
+7. For foreign key getters use getForeignKey(ref privatefield) - in case null or white space the null value is gerenated
+8. For all other string property getters use getString ... in case of null or white space the Undefined value is generated
+9. Do not use constants directly in code
+10. use naming ....Data and ...BaseData; .... View and ....BaseView;   Xxxx and XxxxBase when appropriate

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ISA3.Data.Common.UniqueEntityData">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\UniqueEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Order.OrderItemData">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Order\OrderItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Order.OrderData">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Order\OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Order.OrderOrderItemData">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAAAAAIAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Order\OrderOrderItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Party.PartyData">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Party\PartyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Party.Party_PartyRole">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Party\Party-PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Party.PartyRoleData">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Party\PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Shipment.ShipmentData">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEwAAAAAAAAAAIAAAAAIQIAAAIRAAQAAAgABAAAEAA=</HashCode>
+      <FileName>Shipment\ShipmentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Party.OrganisationData" Collapsed="true">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Party\OrganisationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Party.PersonData" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAEAAAAgACAAAAAAAACAIAAAAAAAAAAAAIAAAg=</HashCode>
+      <FileName>Party\PersonData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Common.PeriodData" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\PeriodData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Common.NamedEntityData" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\NamedEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Common.DefinedEntityData" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\DefinedEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Shipment.IncomingShipmentData" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shipment\IncomingShipmentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Data.Shipment.OutgoingShipmentData" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shipment\OutgoingShipmentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
