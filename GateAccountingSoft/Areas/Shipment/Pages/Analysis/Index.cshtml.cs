@@ -83,7 +83,7 @@ namespace ISA3.GateAccountingSoft.Areas.Shipment.Pages.Analysis
                 {
                     Items.Add(ShipmentViewFactory.Create(element));
                 }
-                catch (NullReferenceException e)
+                catch (NullReferenceException)
                 {
                     // Catches empty thing that the analysiscontext somehow get, but we don't want it
                 }

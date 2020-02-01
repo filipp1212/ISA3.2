@@ -81,7 +81,7 @@ namespace ISA3.GateAccountingSoft.Areas.Shipment.Pages.Outgoing
         public string SearchString { get; set; }
         public string CurrentFilter { get; set; }
 
-        public List<CountryData> CountryList { get; set; }
+        //public List<CountryData> CountryList { get; set; }
 
 
 

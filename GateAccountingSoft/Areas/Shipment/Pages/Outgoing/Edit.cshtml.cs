@@ -13,7 +13,7 @@ namespace ISA3.GateAccountingSoft.Areas.Shipment.Pages.Outgoing
 {
     public class EditModel : OutgoingShipmentsPage
     {
-        public List<CountryData> CountryList { get; set; }
+        //public List<CountryData> CountryList { get; set; }
         public List<SelectListItem> CountryNameSelectList { get; } = new List<SelectListItem>();
         public EditModel(OutgoingShipmentCrudRepository context) : base(context) { }
 
