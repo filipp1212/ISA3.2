@@ -43,6 +43,11 @@ namespace ISA3.Infra.Analysis
             CompanyList = _context.Organization.ToList();
         }
 
+        public Task<IShipment> GetObject(string id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<IEnumerable<IShipment>> GetObjectsList()
         {
             var listData = await CreatePaged(CreateFiltered(СreateSorted()));
@@ -223,7 +228,7 @@ namespace ISA3.Infra.Analysis
             return shipments.AsNoTracking();
         }
 
-        public async Task<IShipment> GetObject(string id)
+        public async Task<IShipment> TGetObject(string id)
         {
             throw new System.NotImplementedException();
             //var shipmentData = await _context.IncomingShipments.FindAsync(id);

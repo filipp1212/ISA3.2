@@ -1,4 +1,4 @@
-﻿namespace ISA3.Core
+﻿namespace ISA3.Domain.Common
 {
     public interface IPaging
     {

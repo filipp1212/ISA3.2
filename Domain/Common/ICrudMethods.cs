@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ISA3.Core
+namespace ISA3.Domain.Common
 {
     public interface ICrudMethods<TObject>
     {

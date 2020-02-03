@@ -3,12 +3,41 @@
   <Interface Name="ISA3.Domain.Shipment.IShipmentCrudRepository">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Shipment\IShipmentCrudRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ISA3.Core.ICrudRepository&lt;TObject&gt;">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ISA3.Domain.Common.IAnalysisRepository">
+    <Position X="12" Y="4" Width="1.75" />
+    <InheritanceLine Type="ISA3.Core.ISorting" IsHidden="true" />
+    <InheritanceLine Type="ISA3.Core.ISearching" IsHidden="true" />
+    <InheritanceLine Type="ISA3.Core.IPaging" IsHidden="true" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAoBYAAAAAQAAAAEAEAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Common\IAnalysisRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISA3.Domain.Common.ICrudMethods&lt;TObject&gt;" Collapsed="true">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAIAIAAAAABAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ICrudMethods.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISA3.Core.ISorting" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ISA3.Core.ISearching" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ISA3.Core.IPaging" Collapsed="true">
+    <Position X="13.75" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

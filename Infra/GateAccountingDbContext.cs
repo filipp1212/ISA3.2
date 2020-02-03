@@ -38,10 +38,10 @@ namespace ISA3.Infra
             createPersonTable(builder);
             createPostalAddressTable(builder);
 
-            builder.Entity<OrderData>().ToTable("OrderData"); 
-            builder.Entity<OrderItemData>().ToTable("OrderItemData");
-            builder.Entity<CountryData>().ToTable("CountryData");
-            builder.Entity<PartyRoleData>().ToTable("PartyRoleData");
+            builder.Entity<OrderData>().ToTable(nameof(OrderData)); 
+            builder.Entity<OrderItemData>().ToTable(nameof(OrderItemData));
+            builder.Entity<CountryData>().ToTable(nameof(CountryData));
+            builder.Entity<PartyRoleData>().ToTable(nameof(PartyRoleData));
         }
         public static void createIncomingShipmentTable(ModelBuilder b)
         {

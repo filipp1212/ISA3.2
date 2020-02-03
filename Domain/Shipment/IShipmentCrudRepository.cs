@@ -1,6 +1,6 @@
-﻿using ISA3.Core;
-using ISA3.Data.Country;
+﻿using ISA3.Data.Country;
 using System.Collections.Generic;
+using ISA3.Domain.Common;
 
 namespace ISA3.Domain.Shipment
 {

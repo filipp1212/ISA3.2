@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Tests.AbstractClassTest&lt;TClass, TBaseClass&gt;">
-    <Position X="3.25" Y="3.25" Width="1.5" />
+  <Class Name="ISA3.Tests.AbstractClassTest&lt;TClass, TBaseClass&gt;">
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AbstractClassTest.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Tests.BaseTest&lt;TClass, TBaseClass&gt;">
-    <Position X="4.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAQAAAAACAAAAABAAACAAABAAAAAAA=</HashCode>
-      <FileName>BaseTest.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Tests.ClassTest&lt;TClass, TBaseClass&gt;">
-    <Position X="5.5" Y="3.25" Width="1.5" />
+  <Class Name="ISA3.Tests.ClassTest&lt;TClass, TBaseClass&gt;">
+    <Position X="3.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassTest.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Tests.SealedClassTest&lt;TClass, TBaseClass&gt;">
-    <Position X="5.5" Y="5" Width="1.5" />
+  <Class Name="ISA3.Tests.SealedClassTest&lt;TClass, TBaseClass&gt;">
+    <Position X="1.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SealedClassTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISA3.Tests.BaseTest&lt;TClass, TBaseClass&gt;" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAABAAAAAAAAAAACAAAAIAAAAACQABAAAAAAA=</HashCode>
+      <FileName>BaseTest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
