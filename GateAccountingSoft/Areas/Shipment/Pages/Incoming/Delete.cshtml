@@ -3,32 +3,21 @@
 @model GateAccountingSoft.Areas.Shipment.Pages.Incoming.DeleteModel
 
 @{
-    ViewData["Title"] = "Delete";
+    Layout = "_Delete";
 }
 
-<h1>Delete</h1>
+    <body>
+    @Html.DisplayControlsFor(model => model.Item.BillNumber)
+    @Html.DisplayControlsFor(model => model.Item.Country)
+    @Html.DisplayControlsFor(model => model.Item.DeliveryNumber)
+    @Html.DisplayControlsFor(model => model.Item.EstimatedArrivalDate)
+    @Html.DisplayControlsFor(model => model.Item.EstimatedReadyDate)
+    @Html.DisplayControlsFor(model => model.Item.ShipmentReportCreationDate)
+    @Html.DisplayControlsFor(model => model.Item.LandCadastre)
+    @Html.DisplayControlsFor(model => model.Item.OrderId)
+    @Html.DisplayControlsFor(model => model.Item.ShippingCompanyId)
+    @Html.DisplayControlsFor(model => model.Item.TransportCompanyId)
+    @Html.DisplayControlsFor(model => model.Item.Notes) 
+    </body>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>IncomingShipmentView</h4>
-    <hr />
-    <dl class="row">
-        @Html.DisplayControlsFor(model => model.Item.BillNumber)
-        @Html.DisplayControlsFor(model => model.Item.Country)
-        @Html.DisplayControlsFor(model => model.Item.DeliveryNumber)
-        @Html.DisplayControlsFor(model => model.Item.EstimatedArrivalDate)
-        @Html.DisplayControlsFor(model => model.Item.EstimatedReadyDate)
-        @Html.DisplayControlsFor(model => model.Item.ShipmentReportCreationDate)
-        @Html.DisplayControlsFor(model => model.Item.LandCadastre)
-        @Html.DisplayControlsFor(model => model.Item.OrderId)
-        @Html.DisplayControlsFor(model => model.Item.ShippingCompanyId)
-        @Html.DisplayControlsFor(model => model.Item.TransportCompanyId)
-        @Html.DisplayControlsFor(model => model.Item.Notes)
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Item.Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
-</div>
+

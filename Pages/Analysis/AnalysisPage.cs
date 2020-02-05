@@ -28,6 +28,11 @@ namespace ISA3.Pages.Analysis
         public ShipmentView Item { get; set; }
 
         public IList<ShipmentView> Items { get; set; }
+        public string PageTitle { get; set; } = "Analysis";
+        public string CurrentSort { get; set; } = "Current sort";
+        public string CurrentFilter { get; set; } = "Current filter";
+        public int PageIndex { get; set; } = 3;
+        public int TotalPages { get; set; } = 10;
 
     }
 }

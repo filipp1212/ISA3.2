@@ -23,5 +23,13 @@ namespace ISA3.Pages.Shipment
         [BindProperty]
         public IncomingShipmentView Item { get; set; }
         public IList<IncomingShipmentView> Items { get; set; }
+
+        public string PageTitle { get; set; } = "Incoming shipment";
+        public string PageSubTitle { get; set; } = "Create";
+        public string CurrentSort { get; set; } = "Current sort";
+        public string CurrentFilter { get; set; } = "Current filter";
+        public int PageIndex { get; set; } = 3;
+        public int TotalPages { get; set; }=10;
+
     }
 }

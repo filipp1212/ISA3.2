@@ -3,52 +3,21 @@
 @model GateAccountingSoft.Areas.Shipment.Pages.Incoming.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    Layout = "_Edit";
 }
 
-<h1>Edit</h1>
+    <body>
+    @Html.EditControlsFor(model => model.Item.BillNumber)
+    @Html.EditControlsFor(model => model.Item.CountryId)
+    @Html.EditControlsFor(model => model.Item.DeliveryNumber)
+    @Html.EditControlsFor(model => model.Item.EstimatedArrivalDate)
+    @Html.EditControlsFor(model => model.Item.EstimatedReadyDate)
+    @Html.EditControlsFor(model => model.Item.ShipmentReportCreationDate)
+    @Html.EditControlsFor(model => model.Item.LandCadastre)
+    @Html.EditControlsFor(model => model.Item.OrderId)
+    @Html.EditControlsFor(model => model.Item.ShippingCompanyId)
+    @Html.EditControlsFor(model => model.Item.TransportCompanyId)
+    @Html.EditControlsFor(model => model.Item.Notes)
+    </body>
 
-<h4>Item</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Item.Id" />
-            @Html.EditControlsFor(model => model.Item.BillNumber)
-            @Html.EditControlsFor(model => model.Item.CountryId)
-            @*@Html.EditControlsFor(model => model.Item.Country)*@
-            <div class="form-group">
-                <label asp-for="Item.Country" class="control-label"></label>
-                <select asp-for="Item.CountryId" asp-items="Model.CountryNameSelectList" class="form-control">
-                    @*@foreach (var country in Model.CountryList)
-                    {
-                        <option value="@country.Id">@country.Name</option>
-                    }*@
-                </select>
-                <span asp-validation-for="Item.CountryId" class="text-danger"></span>
-            </div>
-            
-            @Html.EditControlsFor(model => model.Item.DeliveryNumber)
-            @Html.EditControlsFor(model => model.Item.EstimatedArrivalDate)
-            @Html.EditControlsFor(model => model.Item.EstimatedReadyDate)
-            @Html.EditControlsFor(model => model.Item.ShipmentReportCreationDate)
-            @Html.EditControlsFor(model => model.Item.LandCadastre)
-            @Html.EditControlsFor(model => model.Item.OrderId)
-            @Html.EditControlsFor(model => model.Item.ShippingCompanyId)
-            @Html.EditControlsFor(model => model.Item.TransportCompanyId)
-            @Html.EditControlsFor(model => model.Item.Notes)
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

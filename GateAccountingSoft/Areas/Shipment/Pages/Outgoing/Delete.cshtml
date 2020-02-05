@@ -3,8 +3,22 @@
 @model GateAccountingSoft.Areas.Shipment.Pages.Outgoing.DeleteModel
 
 @{
-    ViewData["Title"] = "Delete";
+    Layout = "_Delete";
 }
+
+    <body>
+    @Html.DisplayControlsFor(model => model.Item.BillNumber)
+    @Html.DisplayControlsFor(model => model.Item.CountryId)
+    @Html.DisplayControlsFor(model => model.Item.DeliveryNumber)
+    @Html.DisplayControlsFor(model => model.Item.EstimatedArrivalDate)
+    @Html.DisplayControlsFor(model => model.Item.EstimatedReadyDate)
+    @Html.DisplayControlsFor(model => model.Item.ShipmentReportCreationDate)
+    @Html.DisplayControlsFor(model => model.Item.LandCadastre)
+    @Html.DisplayControlsFor(model => model.Item.OrderId)
+    @Html.DisplayControlsFor(model => model.Item.ShippingCompanyId)
+    @Html.DisplayControlsFor(model => model.Item.TransportCompanyId)
+    @Html.DisplayControlsFor(model => model.Item.Notes)
+    </body>
 
 <h1>Delete</h1>
 
